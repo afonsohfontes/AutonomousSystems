@@ -1,3 +1,29 @@
+# INSTALAÇAO DO RASPIBIAN NO RASPBERRY PI 3
+
+O Raspbian é um sistema operacional desenvolvido inicialmente para ser usado em conjunto com o Raspberry Pi Zero, mas desde então foram feitas várias atualizações no software.
+
+![image](https://user-images.githubusercontent.com/32318386/33293477-1333352c-d3b4-11e7-9a9f-13e9f4da7098.png)
+
+Para a instalação do software é necessário um cartão de memória SD de pelo menos 8GB de espaço, e recomendado um SD com 16GB de memória, o cartão precisa estar completamente livre, de preferência formatado para uma instalação mais segura do SO.
+
+Foi usado um segundo programa chamado Etcher para a instalação do Raspibian no cartão de memória. O passo a passo da instalação foi a seguinte:
+
+1 – Download do Software Etcher e Raspibian, ambos se encontram no site dos seus fornecedores;
+
+2 – Em seguida abrimos o programa Etcher e selecionamos a imagem que será instalada no cartão SD;
+
+3 – O software irá reconhecer e escolher automaticamente o cartão de memória no qual será instalado o RaspibiaN;
+
+4 – Por fim é necessário selecionar a opção “Flash!” e o Raspibian é instalado no cartão de memória SD.
+
+Seguem as imagens do passo-a-passo.
+
+![image](https://user-images.githubusercontent.com/32318386/33293596-7fdb65e6-d3b4-11e7-9ddf-81f3131c556e.png)
+
+![image](https://user-images.githubusercontent.com/32318386/33293626-98acb4bc-d3b4-11e7-8a48-29e00ea51b6d.png)
+
+![image](https://user-images.githubusercontent.com/32318386/33293649-a9e91fa4-d3b4-11e7-8f00-c374046b2232.png)
+
 # INSTALAÇÃO DO PYTHON 3.0 E OPENCV
 
 Nessa parte do projeto seguiremos com um passo a passo para a instalção do Python v 3.0 e do OpenCV, o Python 3.0 é essencial para conseguirmos rodar os programas desse projeto e o OpenCV é o ambiente em que os programas serão rodados.
