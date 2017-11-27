@@ -23,3 +23,4 @@ $ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 $ sudo apt-get install libxvidecore-dev libx264-dev
 
 
+//teste
