@@ -98,7 +98,7 @@ Agora vamos instalar nosso CMake
 $ cd ~/opencv-3.1.0/
 $ mkdir build
 $ cd build
-$ cmake D CMAKE_BUILD_TYPE=RELEASE 
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE 
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D INSTALL_PYTHON_EXAMPLES=ON \
     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.1.0/modules \
@@ -122,3 +122,5 @@ Finalmente se tudo ocorreu como o desejado poderemos ver se o OpenCV está funci
 $ source ~/.profile 
 $ workon cv
 $ python
+
+-teste-
