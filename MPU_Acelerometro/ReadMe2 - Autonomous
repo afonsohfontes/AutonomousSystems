@@ -1,0 +1,18 @@
+Aplicando os conceitos aplicados e explicados no "ReadMe1 - Intro" deste diretório, nosso projeto funciona da seguinte maneira:
+
+Logo ao ligar o veículo, deve-se notar que o mesmo tem os módulos alimentados (MPU6050 e Bluetooth), mas que o veículo não se
+movimenta por aproximadamente 20 segundos.
+
+Isso acontece devido a necessidade de se estabilizar os valores dos quaternions que começam todos zerados e de acordo com a
+posição do carro em relação às influências de aceleração, inclusive da gravidade, deve-se ter um tempo de estabilização para que o
+carro não inicie em uma trajetória não-retilínea.
+
+Após as 400 contagens (variável "first" no programa), o mesmo libera o funcionamento de fato do carro, aplicando potência às rodas.
+
+A partir desse momento, o vetor Z passa a ser o eixo de rotação monitorado pelo sensor MPU6050.
+Cada solicitação de mudança de ângulo (SetPoint é a variável "SP" no programa) faz com que o carro busque esse novo valor através
+de um erro (variável "error"), onde esse recebe a subtração entre o valor de SP - actual_ang (este recebe o valor atual de ângulo
+do eixo).
+
+Assim, o controlador PID faz o controle das rodas para que se zere error e, atingido esse ângulo solicitado, o valor do ângulo
+atual é zerado e a partir de então, essa será a nova direção reta do carro.
