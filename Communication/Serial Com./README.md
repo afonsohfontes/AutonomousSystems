@@ -5,18 +5,18 @@ Nessa parte do projeto seguiremos com um passo a passo para a instalção do Pyt
 # 1) Instalações Básicas
 
 O primeiro passo é instalar os updates e upgrades existentes para seu raspbian:
-
+```
 $ sudo apt-get update
 $ sudo apt-get upgrade
-
+```
 Agora iremos instalar algumas ferramentas como o CMake, que ajuda na configuração do OpenCV
-
+```
 $ sudo apt-get install build-essential cmake pkg-config
-
+```
 Em seguida, iremos instalar pacotes I/O de leitura de imagens (JPEG, PNG, TIFF, etc)
-
+```
 $ sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
-
+```
 E agora faremos o mesmo para pacotes I/O de leitura de vídeos.
 
 $ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
