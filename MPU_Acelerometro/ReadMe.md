@@ -6,7 +6,7 @@ Segundo o datasheet (anexo) do mesmo, os ranges do equipamento são os seguintes
 
 GIROSCÓPIO
 SETTING  | SCALE  | VALUE  | UNIT
--------- | ------ | ------ | -----
+:------- | :----- | :----- | :---
 FS_SEL=0 | ±250	  | 131		 | LSB(º/s)
 FS_SEL=1 | ±500 	| 65.5	 | LSB(º/s)
 FS_SEL=2 | ±1000	| 32.8	 | LSB(º/s)
