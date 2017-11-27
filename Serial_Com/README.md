@@ -123,4 +123,3 @@ $ source ~/.profile
 $ workon cv
 $ python
 
--teste-
