@@ -1,0 +1,67 @@
+void processQuat():
+
+Esta função seleciona entre os valores brutos lidos diretamente do sensor MPU6050, quais bytes interessam à leitura dos
+dispositivos acelerômetro e giroscópio.
+
+Pode-se notar que:
+    processed_packet[0] = readd_packet[0];
+    processed_packet[1] = readd_packet[1];
+    processed_packet[2] = readd_packet[4]; //-> o byte 2 processado recebe o byte 4 bruto, pois os bytes 2 e 3 não interessam.
+    processed_packet[3] = readd_packet[5]; //-> assim, sucessivamente.
+    processed_packet[4] = readd_packet[8];
+    processed_packet[5] = readd_packet[9];
+    processed_packet[6] = readd_packet[12];
+    processed_packet[7] = readd_packet[13];
+    
+void writeQuat():
+  q[0] = (long) ((((unsigned long) processed_packet[0]) << 8) + ((unsigned long) processed_packet[1]));
+  q[1] = (long) ((((unsigned long) processed_packet[2]) << 8) + ((unsigned long) processed_packet[3]));
+  q[2] = (long) ((((unsigned long) processed_packet[4]) << 8) + ((unsigned long) processed_packet[5]));
+  q[3] = (long) ((((unsigned long) processed_packet[6]) << 8)  + ((unsigned long) processed_packet[7]));
+  //Os "q" acima são os quaternions. São parâmetros necessários para calcular os ângulos de Euler. Recebem 2 bytes inteiros
+  processados pela função anterior.
+  
+  for(int i = 0; i < 4; i++ ) {
+    if( q[i] > 32767 ) {
+      q[i] -= 65536;
+    }
+    //Este "for" garante o range do sensor entre -X a +X.
+    
+    //Exemplo:
+    //Se o quaternion q[0] varia até 4 radianos, este "for" faz com que o mesmo funcione entre -2 e +2 radianos.    
+    
+    q[i] = ((float) q[i]) / 16384.0f;
+  }
+  //Claramente, essa linha de código mostra que está convertendo valores brutos em valores menores
+  //Exemplo:
+  //Se o range de q[0] for de -32464 a +32465, após a execução dessa linha q[0] vai de -2 a +2.
+
+  if (first >= 400 ){
+    if(first == 400 || reset_coord == true){
+      a[0] = q[0];
+      a[1] = -q[1];
+      a[2] = -q[2];
+      a[3] = -q[3];
+      reset_coord = false;
+      }
+    //A função "if" acima é responsável por fazer a contagem do número de vezes que o quaternion vai ser atualizado até liberar
+    //potência para as rodas (first) e irá realizar o zeramento do valor do quaternion, através do valor conjugado dele.
+    //Sempre que for solicitado um novo ângulo, e esse ângulo for atingido, "reset_coord" vai a true e zera o quaternion
+    //novamente.
+    b[0] = q[0];
+    b[1] = q[1];
+    b[2] = q[2];
+    b[3] = q[3];
+    q[0] = a[0] * b[0] - a[1] * b[1] - a[2] * b[2] - a[3] * b[3];
+    q[1] = a[0] * b[1] + a[1] * b[0] + a[2] * b[3] - a[3] * b[2];
+    q[2] = a[0] * b[2] - a[1] * b[3] + a[2] * b[0] + a[3] * b[1];
+    q[3] = a[0] * b[3] + a[1] * b[2] - a[2] * b[1] + a[3] * b[0];
+    }
+    if(first <= 400){
+      first++;
+    }
+  deg[0] = (atan2(2 * q[1] * q[2] - 2 * q[0] * q[3], 2 * q[0]*q[0] + 2 * q[1] * q[1] - 1))*180/3.1415926; // psi converted to degrees
+  //deg[1] = (-asin(2 * q[1] * q[3] + 2 * q[0] * q[2]))*180/3.1415926; // theta converted to degrees
+  //deg[2] = (atan2(2 * q[2] * q[3] - 2 * q[0] * q[1], 2 * q[0] * q[0] + 2 * q[3] * q[3] - 1))*180/3.1415926; // phi converted to degrees
+  //Serial.print("Angle: "); Serial.println(deg[0]);
+}
