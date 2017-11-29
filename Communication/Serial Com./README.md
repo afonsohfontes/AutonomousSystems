@@ -1,5 +1,7 @@
 # SERIAL COMMUNICATION
 
+Para nossa comunicação serial iremos instalar o módulo PySrial, sse módulo encorpora o necessário para fazer a "conversa" entre o Raspberry Pi 3 e o Arduino.
+
 # Instalação
 
 A linha de comando: [ pip install pyserial ] deve funcionar para a maioria dos usuários.
