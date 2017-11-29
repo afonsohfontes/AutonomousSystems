@@ -1,4 +1,7 @@
 # AutonomousSystems
+
+Este testo foi elaborado por: [Ramon Bernardes](https://github.com/RamonRBF)
+
 ## Introdução
 O projeto tem como objetivo fazer um carro autônomo, capaz de andar e fazer curvas em uma pista sem que saia dela. Ele o carro é equipado com uma câmera, um microcontrolador e um sistema capaz de processar imagens e uma inteligência artificial como, no nosso caso, um computador. Quando o carro começar a andar, a câmera deverá capturar imagens da pista e manda-las para o sistema de processamento de imagens e da IA, onde no sistema ele irá, pela imagem, procurar o centro da pista e mandar um valor de acordo para o microcontrolador, que neste fará o controle de rodas e outros sensores (através de um controlador PID) para se manter no centro.
 
