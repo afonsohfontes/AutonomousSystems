@@ -1,8 +1,10 @@
 # Arduino
 
-Este são os cordigos utilizados no carro para arduino. Ele é dividido em 3 partes, que são: "Autonomous_Car_Final"; "Functions"; "MPU6050_Setup_Loop".
+Este texto foi elaborado por: [Ramon Bernardes](https://github.com/RamonRBF)
 
 ## Codigos
+
+Este são os cordigos utilizados no carro para arduino. Ele é dividido em 3 partes, que são: "Autonomous_Car_Final"; "Functions"; "MPU6050_Setup_Loop".
 
 ### Autonomous_Car_Final
 
