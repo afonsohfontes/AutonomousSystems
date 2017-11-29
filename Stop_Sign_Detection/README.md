@@ -108,4 +108,62 @@ Possível erro pode ocorrer pela formatação de espaço por tab.
 ![image](https://user-images.githubusercontent.com/32276018/33354906-e3cd6268-d493-11e7-889c-c98dd0b6a6e3.png)
 
 
+# PASSOS PARA REALIZAR
+
+Primeiro passo é instalar os updates
+sudo apt-get update
+
+INSTALANDO O ANACONDA
+
+cd /tmp
+
+curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
+
+sha256sum Anaconda3-4.2.0-Linux-x86_64.sh
+
+bash Anaconda3-4.2.0-Linux-x86_64.sh
+
+#CASO ERRE:
+export PATH="/home/<user>/anaconda3/bin:$PATH" #Replace <user> with the actual path name
+source ~/.bashrc
+#Install Conda
+ 
+ 
+SELECIONAR O COMPARTIMENTO NO QUAL IRA BAIXAR OS GIT NECESÁRIOS 
+cd ~
+
+git clone https://github.com/afonsohfontes/car-behavioral-cloning.git
+
+cd ~
+
+CRIANDO O AMBIENTE DE CRIAÇÃO
+cd car-behavioral-cloning
+conda env create -f environment.yml
+
+ATIVANDO O AMBIENTE
+source activate car
+
+INSTALANDO ALGUNS PIPs ESSENCIAIS PARA O PROJETO
+sudo pip install opencv-python
+conda install -c menpo opencv 
+sudo apt-get install python-pip python-dev ipython
+sudo apt-get install bluetooth libbluetooth-dev
+sudo pip install pybluez
+pip install -i https://pypi.anaconda.org/pypi/simple pybluez
+sudo apt-get install python-pygame
+ 
+ ENTRANDO NA PASTA NO QUAL IRA BAIXAR O GITHUB
+cd ~
+
+git clone https://github.com/Barros92/detec-o-de-parada-de-sinal.git
+cd ~
+source active car
+ python detectStopSigns.py -p stopPrototype.png -i Stop\ Sign\ Dataset/3.jpg
+
+ATUALIZAÇÃO DOS UPGRADES E UPDATES
+sudo apt-get dist-upgrade
+sudo apt-get update
+ 
+
+
 
