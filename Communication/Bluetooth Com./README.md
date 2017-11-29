@@ -8,12 +8,12 @@ Na comunicação Bluetooth no nosso projeto iremos trabalhar com o módulo PyBlu
 # Exemplo Simples
 import Bluetooth # Importa o módulo Bluetooth
 
-nearby_devices = bluetooth.discover_devices(lookup_names=True)
-print("found %d devices" % len(nearby_devices))
+nearby_devices = bluetooth.discover_devices(lookup_names=True) #Localização de dispositivos)
+print("found %d devices" % len(nearby_devices)) #Print dos dispositivos localizados
 
 for addr, name in nearby_devices:
     print("  %s - %s" % (addr, name))
-# bluetooth low energy scan
+# Bluetooth modo conservação de energia
 from bluetooth.ble import DiscoveryService
 
 service = DiscoveryService()
