@@ -1,5 +1,5 @@
 # INSTALAÇAO DO RASPIBIAN NO RASPBERRY PI 3
-Autor: Rafael Bezerra Melo Sousa Lemos
+Este texto foi elaborado por: Rafael Bezerra Melo Sousa Lemos
 
 O Raspbian é um sistema operacional desenvolvido inicialmente para ser usado em conjunto com o Raspberry Pi Zero, mas desde então foram feitas várias atualizações no software.
 
