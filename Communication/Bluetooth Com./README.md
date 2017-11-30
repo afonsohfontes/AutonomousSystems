@@ -30,6 +30,14 @@ Use o comando pip para a instalação do PyBluez. Para a instalação do módulo
 ```
 $ pip install pybluez
 ```
+Para a instalação da versão de teste de economia de energia usa-se:
+```
+pip install pybluez[ble]
+```
+Para a instalação Source usa-se:
+```
+python setup.py install
+```
 
 
 
