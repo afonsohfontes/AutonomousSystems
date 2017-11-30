@@ -2,6 +2,8 @@
 
 Na comunicação Bluetooth no nosso projeto iremos trabalhar com o módulo PyBluez, sendo ele um módulo de extensão python que permite os acessos que precisamos.
 
+Nos arquivos acima teremos alguns exemplos de como se utilizar o bluetooth do dispositivo.
+
 # Exemplo
 
 ```
