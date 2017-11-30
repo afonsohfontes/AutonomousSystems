@@ -30,7 +30,9 @@ A função lr_curvature() identifica os pixels brancos (nonzero pixels) na image
 
 Estes cálculos fornecem o resultado em pixels; opcionalmente é possível fazer uma conversão de pixels para metros desde que se conheça a largura e o comprimento (em metros) de uma faixa da via dentro da região de interesse.
 
-
+Autores: 
+<a href="https://github.com/AndreVTavares">AndreTavares</a>
+<a href="https://github.com/nunesian">IaN.</a>
 
 
 
