@@ -22,3 +22,12 @@ devices = service.discover(2)
 for address, name in devices.items():
     print("name: {}, address: {}".format(name, address))
 ```
+# Instalação
+
+Use o comando pip para a instalação do PyBluez. Para a instalação do módulo nesse projeto é necessário ter atualizado o Python para a versão 2.3 ou superior, caso não esteja com a versão necessária vá até a sessão "Getting Started" para realizar a atualização.
+```
+$ pip install pybluez
+```
+
+
+
