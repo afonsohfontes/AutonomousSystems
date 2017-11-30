@@ -1,5 +1,6 @@
 # SERIAL COMMUNICATION
-Este texto foi elaborado por: Rafael Bezerra Melo Sousa Lemos
+
+Este texto foi elaborado por: Rafael Bezerra
 
 Para nossa comunicação serial iremos instalar o módulo PySrial, sse módulo encorpora o necessário para fazer a "conversa" entre o Raspberry Pi 3 e o Arduino.
 
